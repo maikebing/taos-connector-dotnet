@@ -24,3 +24,5 @@ examples/Properties/
 examples/FrameWork45/FrameWork45.csproj.user
 .vs
 .config/
+/bin/Debug
+/obj
