@@ -53,7 +53,7 @@ namespace Examples.TMQ
                 TDConnectUser = "root",
                 TDConnectPasswd = "taosdata",
                 MsgWithTableName = "true",
-                TDConnectIp = "127.0.0.1",
+                TDConnectIp = "taos",
             };
             var consumer = new ConsumerBuilder(cfg)
                 .Build();

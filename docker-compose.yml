@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  net6examples:
+    image: ${DOCKER_REGISTRY-}net6examples
+    depends_on:
+      - taos 
+    links:
+      - taos 
+    build:
+      context: .
+      dockerfile: examples/NET6Examples/Dockerfile
+    networks:
+      - taos-network
+  taos:
+    image: tdengine/tdengine:3.0.1.6
+    restart: always
+    hostname: taos
+    ports:
+      - 6030:6030
+      - 6035:6035
+      - 6041:6041
+      - 6030-6040:6030-6040/udp
+    networks:
+      - taos-network
+
+networks: 
+  taos-network:
+      driver:  bridge

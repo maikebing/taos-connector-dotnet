@@ -10,7 +10,7 @@ namespace Examples.UtilsTools
     public class Tools
     {
 
-        static string ip = "127.0.0.1";
+        static string ip = "taos";
         static string user = "root";
         static string password = "taosdata";
         static string db = "";

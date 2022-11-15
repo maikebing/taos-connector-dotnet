@@ -15,10 +15,10 @@ namespace Examples
         static void Main(string[] args)
         {
             WebSocketSample webSocketSample = new WebSocketSample("ws_db", "ws_stb");
-            webSocketSample.RunWS("ws://127.0.0.1:6041");
+            webSocketSample.RunWS("ws://taos:6041");
 
             WebSocketSTMT webSocketSTMT = new WebSocketSTMT("ws_db", "ws_stmt_stb", true);
-            webSocketSTMT.RunSTMT("ws://127.0.0.1:6041");
+            webSocketSTMT.RunSTMT("ws://taos:6041");
 
             IntPtr conn = Tools.TDConnection();
 
